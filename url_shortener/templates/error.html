@@ -1,0 +1,8 @@
+{%extends 'index.html'%}
+
+{% block article %}
+<img src="{{url_for('static', filename = 'error.jpg')}}" alt="">
+<p id="error_msg" >
+    Are you looking for something ? Sorry, the page you asked for does not exist... Return to <a href="/">home</a>???
+</p>
+{% endblock %}

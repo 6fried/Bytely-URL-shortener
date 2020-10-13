@@ -1,0 +1,18 @@
+{%extends 'index.html'%}
+
+{% block article %}
+<div id="returns">
+    <form method="POST" action=""> <!--application de compression-->
+        <p>
+            <label for="url_box" >Enter the url here</label>: <input type="text" name="url_box" id="url" size="33" autofocus required>
+            <input id="valid" type="submit" value="Shorten">
+        </p>
+    </form>
+
+    <ul>
+        <li>
+            <span class="url">{{url}}</span>  <span class="shorten">{{shortened}}</span>
+        </li>        
+    </ul>
+</div>
+{% endblock %}

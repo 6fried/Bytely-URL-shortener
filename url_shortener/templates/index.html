@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}"/>
+        <link rel="stylesheet" href="{{url_for('static', filename = 'fonts.css')}}"/>
+        <!-- {if lt IE 9}>
+            <script
+            src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <title>{{ title }} </title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Bytely: </h1><h2>The best url shortener</h2>
+
+            <nav>
+                <p>
+                    <a href="/">  Accueil </a></li>   
+                    <a href="/form">Shorten an url  </a></li>
+                </p>
+            </nav>
+        </header>
+
+        <section>
+            <article>
+                {% block article %}
+                <p>
+                    <h1>What is Bytely ???</h1>
+                    <span>Bytely</span> is a URL shortening tool made available to you by a charming web master who had in mind to make URL compression as simple as possible... It is in this logic that Bytely was born, an improved tool, worthy of the future and with which you won't risk going back to another tool... So if you are interested in our services, don't hesitate and <a href="./form.html">start here</a>.
+                </p>
+                {% endblock %}
+            </article>
+
+            <aside>
+                <img src="{{url_for('static', filename = 'fastest.jpg')}}" alt="The fastest">
+                <p>
+                    Shorten your URLs more faster than ever with <span>Bytely</span> !
+                </p>
+            </aside>
+        </section>
+
+        <footer>
+            <div>
+                <h2>Authors</h2>
+                <a href="/about+author/">Sixfried Vi Brittania</a> <!-- Page de présentation -->
+            </div>
+
+            <div>
+                <h2>Contacts</h2>
+                Email: <a href="mailto:hohelric@gmail.com">hohelric@gmail.com</a>
+            </div>
+
+            <div>
+                <h2>Contributors</h2>
+                <a href="mailto:junior.medehou@hotmail.com" id="cont">Nemesix X1</a><br> <!-- junior.email-->
+            </div>
+        </footer>
+    </body>
+</html>
