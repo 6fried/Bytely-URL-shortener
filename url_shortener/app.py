@@ -16,7 +16,7 @@ def form_manager():
     if request.method == 'GET':
         return render_template('form.html', title = 'Shorten your URL as faster as light')
     elif request.method == 'POST':
-        url = request.form['url_box']
+        url = request.form['url_box'].strip()
         if not tests.begins_with_http(url):
             url = 'https://{}'.format(url)
         if tests.exists(url):
